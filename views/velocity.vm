@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/styles/a.css">
+	</head>
+	<body>
+		<h1>做一个简单的人~</h1>
+		<h4>velocity</h4>
+		<h6>Hello ${key}</h6>
+		<br>
+		<ol>
+			<li>
+				<h4>if</h4>
+				#if($msg)
+				$!msg
+				#end
+			</li>
+			<li>
+				<h4>foreach</h4>
+				#foreach( $info in $list) 
+				${info}&nbsp;
+				#end 
+			</li>
+			<li>
+				<h4>macro</h4>
+				#macro(testMacro)
+				This is a macro
+				#end
+				#testMacro
+			</li>
+			<li>
+				<h4>include</h4>
+				#set($a = "test include")
+				#include("./vm/include.vm")
+			</li>
+			<li>
+				<h4>parse</h4>
+				#set($b = "test parse")
+				#parse("./vm/parse.vm")
+			</li>
+		</ol>
+		<script src="/scripts/a.js"></script>
+	</body>
+</html>

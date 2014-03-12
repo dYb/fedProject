@@ -1,0 +1,1 @@
+ \${b} will be passed as "<strong>${b}</strong>"
